@@ -1,0 +1,21 @@
+<h1> Listing Customers </h1>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Image</th>
+  </tr>
+  </thead>
+
+    <tbody>
+    <% @customer.each do |cust| %>
+      <tr>
+        <td><%= cust.fullname %></td>
+        <td><%= cust.email %></td>
+        <td><%= image_tag cust.image %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
